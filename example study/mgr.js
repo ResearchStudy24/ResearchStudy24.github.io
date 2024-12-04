@@ -72,6 +72,14 @@ define(['managerAPI',
             header: 'Welcome'
         }],
 
+	consent: [{
+            inherit: 'instructions',
+            name: 'consent',
+            templateUrl: 'consent.jst',
+            title: 'Consent',
+            header: 'Consent'
+        }],
+
         raceiat_instructions: [{
             inherit: 'instructions',
             name: 'raceiat_instructions',
