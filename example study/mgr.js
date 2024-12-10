@@ -162,7 +162,7 @@ define(['managerAPI',
         },
         
         
-        {inherit: 'intro'},
+       add sequence {inherit: 'intro'},
         {
             mixer:'random',
             data:[
