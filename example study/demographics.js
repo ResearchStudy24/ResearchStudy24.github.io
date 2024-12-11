@@ -105,6 +105,20 @@ define(['questAPI'], function(Quest){
 			{text:'Psychiatrist',value:5}
 		]
 	});
+	
+	API.addQuestionsSet('clinicalYears',{
+		inherit: 'singleChoice',
+		style:'multiButtons',
+		name: 'clinicalYears',
+		stem: "How many years have you practiced clinically?",
+		answers: [
+			{text:'0-5',value:1},
+			{text:'6-10',value:2},
+			{text:'11-15',value:3},
+			{text:'16-20',value:4},
+			{text:'21+',value:5}
+		]
+	});
 
 	API.addQuestionsSet('birthYear',{
 		inherit: 'singleChoicedrop',
@@ -1150,6 +1164,10 @@ define(['questAPI'], function(Quest){
 			},
 			{
 				inherit: 'basicPage',
+				questions: [{inherit: 'clinicalYears'}]
+			},
+			{
+				inherit: 'basicPage',
 				questions: [ 
 					{inherit:'ethnicityomb', autoSubmit:true}
 				]
@@ -1187,6 +1205,10 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'license'}]
+			},
+			{
+				inherit: 'basicPage',
+				questions: [{inherit: 'clinicalYears'}]
 			},
 			{
 				inherit: 'basicPage',
