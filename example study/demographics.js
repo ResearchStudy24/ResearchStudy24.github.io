@@ -134,6 +134,21 @@ define(['questAPI'], function(Quest){
 			{text:'Foster home',value:6}
 		]
 	});
+	
+	API.addQuestionsSet('bias',{
+		inherit: 'singleChoice',
+		style:'multiButtons',
+		name: 'bias',
+		stem: "How much training have you had regarding biases?",
+		answers: [
+			{text:'0-2 Trainings',value:1},
+			{text:'3-5 Trainings',value:2},
+			{text:'6-8 Trainings',value:3},
+			{text:'9-11 Trainings',value:4},
+			{text:'12+ Trainings',value:5}	
+		]
+	});
+	
 	API.addQuestionsSet('birthYear',{
 		inherit: 'singleChoicedrop',
 		name: 'birthyear',
@@ -1186,6 +1201,10 @@ define(['questAPI'], function(Quest){
 			},
 			{
 				inherit: 'basicPage',
+				questions: [{inherit: 'bias'}]
+			},
+			{
+				inherit: 'basicPage',
 				questions: [ 
 					{inherit:'ethnicityomb', autoSubmit:true}
 				]
@@ -1231,6 +1250,10 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'settings'}]
+			},
+			{
+				inherit: 'basicPage',
+				questions: [{inherit: 'bias'}]
 			},
 			{
 				inherit: 'basicPage',
