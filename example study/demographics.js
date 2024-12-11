@@ -78,19 +78,7 @@ define(['questAPI'], function(Quest){
 	// 	]
 	// });
 
-	// API.addQuestionsSet('genderIdentity',{
-	// 	inherit: 'multiChoice',
-	// 	name: 'genderIdentity',
-	// 	stem: "What is your current gender identity? (check all that apply)",
-	// 	answers: [
-	// 		{text:'Male',value:1},
-	// 		{text:'Female',value:2}, 
-	// 		{text:'Trans male/Trans man',value:3}, 
-	// 		{text:'Trans female/Trans woman',value:4}, 
-	// 		{text:'Genderqueer/Gender nonconforming',value:5}, 
-	// 		{text:'A different identity',value:6}
-	// 	]
-	// });
+	
 
 	 API.addQuestionsSet('license',{
 		inherit: 'singleChoice',
@@ -309,7 +297,31 @@ define(['questAPI'], function(Quest){
 			{text:'Not Hispanic or Latino',value:2},
 			{text:'Unknown',value:3}
 		]
-    });
+    	});
+	
+	API.addQuestionsSet('measures',{
+		inherit: 'multiChoice',
+		name: 'measures',
+		stem: "Have you utilized any of the following clinical measures/tools? (check all that apply)",
+		answers: [
+			{text:'Clinician-Rated Dimensions of Psychosis Symptom Severity scale',value:1},
+			{text:'Brief Psychiatric Rating Scale',value:2}, 
+			{text:'Quality of Life Scale',value:3}, 
+			{text:'Schedule of Affective Disorders and Schizophrenia',value:4}, 
+			{text:'The Auditory Hallucinations Schedule',value:5}, 
+			{text:'DSM III-R Checklist',value:6},
+			{text:'DSM III-R Diagnostic Interview',value:7},
+			{text:'Structured Clinical Interview for DSM-IV',value:8},
+			{text:'Positive and Negative Syndrome Scale (PANSS)',value:9},
+			{text:'Repeatable Battery for the Assessment of Neuropsychological Status',value:10},
+			{text:'Specific Levels of Functioning Scale (SLOF)',value:11},
+			{text:'WHO-CIDI 3.0 psychosis screen',value:12},
+			{text:'WHO Disability Assessment Schedule',value:13},
+			{text:'The self-report Service User and Resource Form',value:14},
+			{text:'Diagnostic Interview for Psychosis and Affective Disorders (DI-PAD)',value:15},
+			{text:'Operational Criteria Checklist for Psychotic Illness',value:16}	
+		]
+	});
 
 	// API.addQuestionsSet('politicalid',{
 	// 	inherit: 'singleChoice',
@@ -1219,6 +1231,10 @@ define(['questAPI'], function(Quest){
 			},
 			{
 				inherit: 'basicPage',
+				questions: [{inherit: 'measures'}]
+			},
+			{
+				inherit: 'basicPage',
 				questions: [ 
 					{inherit:'ethnicityomb', autoSubmit:true}
 				]
@@ -1272,6 +1288,10 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'cultural'}]
+			},
+			{
+				inherit: 'basicPage',
+				questions: [{inherit: 'measures'}]
 			},
 			{
 				inherit: 'basicPage',
