@@ -1135,18 +1135,18 @@ define(['questAPI'], function(Quest){
 	if (isTouch)
 	{
 		API.addSequence([
-			{
-				inherit: 'basicPage',
-				questions: [
-					{inherit:'birthSex'}
-				]
-			},
-			{
-				inherit: 'basicPage',
-				questions: [
-					{inherit: 'genderIdentity'}
-				]
-			},
+			// {
+			// 	inherit: 'basicPage',
+			// 	questions: [
+			// 		{inherit:'birthSex'}
+			// 	]
+			// },
+			// {
+			// 	inherit: 'basicPage',
+			// 	questions: [
+			// 		{inherit: 'genderIdentity'}
+			// 	]
+			// },
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'birthYear'}]
@@ -1172,17 +1172,17 @@ define(['questAPI'], function(Quest){
 	else
 	{
 		API.addSequence([
-			{
-				inherit: 'basicPage',
-				questions: [
-					{inherit: 'birthSex', helpText: '', autoSubmit:false}, 
-					{inherit: 'genderIdentity', autoSubmit:false}
-				]
-			},
-			{
-				inherit: 'basicPage',
-				questions: [{inherit: 'birthMonth'}]
-			},
+			// {
+			// 	inherit: 'basicPage',
+			// 	questions: [
+			// 		{inherit: 'birthSex', helpText: '', autoSubmit:false}, 
+			// 		{inherit: 'genderIdentity', autoSubmit:false}
+			// 	]
+			// },
+			// {
+			// 	inherit: 'basicPage',
+			// 	questions: [{inherit: 'birthMonth'}]
+			// },
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'birthYear'}]
