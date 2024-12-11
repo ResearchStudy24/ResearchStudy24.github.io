@@ -92,26 +92,19 @@ define(['questAPI'], function(Quest){
 	// 	]
 	// });
 
-	// API.addQuestionsSet('birthMonth',{
-	// 	inherit: 'singleChoice',
-	// 	style:'multiButtons',
-	// 	name: 'birthmonth',
-	// 	stem: "What is your birth month?",
-	// 	answers: [
-	// 		{text:'January',value:1},
-	// 		{text:'February',value:2},
-	// 		{text:'March',value:3},
-	// 		{text:'April',value:4},
-	// 		{text:'May',value:5},
-	// 		{text:'June',value:6},
-	// 		{text:'July',value:7},
-	// 		{text:'August',value:8},
-	// 		{text:'September',value:9},
-	// 		{text:'October',value:10},
-	// 		{text:'November',value:11},
-	// 		{text:'December',value:12}
-	// 	]
-	// });
+	 API.addQuestionsSet('license',{
+		inherit: 'singleChoice',
+		style:'multiButtons',
+		name: 'license',
+		stem: "What professional mental health license do you hold?",
+		answers: [
+			{text:'LMFT',value:1},
+			{text:'LCSW',value:2},
+			{text:'LPCC',value:3},
+			{text:'Psychologist',value:4},
+			{text:'Psychiatrist',value:5}
+		]
+	});
 
 	API.addQuestionsSet('birthYear',{
 		inherit: 'singleChoicedrop',
@@ -1153,6 +1146,10 @@ define(['questAPI'], function(Quest){
 			},
 			{
 				inherit: 'basicPage',
+				questions: [{inherit: 'license'}]
+			},
+			{
+				inherit: 'basicPage',
 				questions: [ 
 					{inherit:'ethnicityomb', autoSubmit:true}
 				]
@@ -1186,6 +1183,10 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'birthYear'}]
+			},
+			{
+				inherit: 'basicPage',
+				questions: [{inherit: 'license'}]
 			},
 			{
 				inherit: 'basicPage',
