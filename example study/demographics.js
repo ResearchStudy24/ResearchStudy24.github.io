@@ -14,7 +14,7 @@ define(['questAPI'], function(Quest){
 		autoFocus:true, 
 		header: 'Demographics',
 		numbered: false,
-		progressBar: isTouch ? 'Page <%= pagesMeta.number %> out of 6' : 'Page <%= pagesMeta.number %> out of 13'
+		progressBar: isTouch ? 'Page <%= pagesMeta.number %> out of 9' : 'Page <%= pagesMeta.number %> out of 9'
 	});
 
 	/**
