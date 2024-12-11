@@ -68,50 +68,50 @@ define(['questAPI'], function(Quest){
 	/**
 	* Actual questions
 	*/
-	API.addQuestionsSet('birthSex',{
-		inherit: 'singleChoice',
-		name: 'birthSex',
-		stem: "What sex were you assigned at birth, on your original birth certificate?",
-		answers: [
-			{text:'Male',value:1},
-			{text:'Female',value:2}
-		]
-	});
+	// API.addQuestionsSet('birthSex',{
+	// 	inherit: 'singleChoice',
+	// 	name: 'birthSex',
+	// 	stem: "What sex were you assigned at birth, on your original birth certificate?",
+	// 	answers: [
+	// 		{text:'Male',value:1},
+	// 		{text:'Female',value:2}
+	// 	]
+	// });
 
-	API.addQuestionsSet('genderIdentity',{
-		inherit: 'multiChoice',
-		name: 'genderIdentity',
-		stem: "What is your current gender identity? (check all that apply)",
-		answers: [
-			{text:'Male',value:1},
-			{text:'Female',value:2}, 
-			{text:'Trans male/Trans man',value:3}, 
-			{text:'Trans female/Trans woman',value:4}, 
-			{text:'Genderqueer/Gender nonconforming',value:5}, 
-			{text:'A different identity',value:6}
-		]
-	});
+	// API.addQuestionsSet('genderIdentity',{
+	// 	inherit: 'multiChoice',
+	// 	name: 'genderIdentity',
+	// 	stem: "What is your current gender identity? (check all that apply)",
+	// 	answers: [
+	// 		{text:'Male',value:1},
+	// 		{text:'Female',value:2}, 
+	// 		{text:'Trans male/Trans man',value:3}, 
+	// 		{text:'Trans female/Trans woman',value:4}, 
+	// 		{text:'Genderqueer/Gender nonconforming',value:5}, 
+	// 		{text:'A different identity',value:6}
+	// 	]
+	// });
 
-	API.addQuestionsSet('birthMonth',{
-		inherit: 'singleChoice',
-		style:'multiButtons',
-		name: 'birthmonth',
-		stem: "What is your birth month?",
-		answers: [
-			{text:'January',value:1},
-			{text:'February',value:2},
-			{text:'March',value:3},
-			{text:'April',value:4},
-			{text:'May',value:5},
-			{text:'June',value:6},
-			{text:'July',value:7},
-			{text:'August',value:8},
-			{text:'September',value:9},
-			{text:'October',value:10},
-			{text:'November',value:11},
-			{text:'December',value:12}
-		]
-	});
+	// API.addQuestionsSet('birthMonth',{
+	// 	inherit: 'singleChoice',
+	// 	style:'multiButtons',
+	// 	name: 'birthmonth',
+	// 	stem: "What is your birth month?",
+	// 	answers: [
+	// 		{text:'January',value:1},
+	// 		{text:'February',value:2},
+	// 		{text:'March',value:3},
+	// 		{text:'April',value:4},
+	// 		{text:'May',value:5},
+	// 		{text:'June',value:6},
+	// 		{text:'July',value:7},
+	// 		{text:'August',value:8},
+	// 		{text:'September',value:9},
+	// 		{text:'October',value:10},
+	// 		{text:'November',value:11},
+	// 		{text:'December',value:12}
+	// 	]
+	// });
 
 	API.addQuestionsSet('birthYear',{
 		inherit: 'singleChoicedrop',
