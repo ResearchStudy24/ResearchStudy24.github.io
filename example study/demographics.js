@@ -149,6 +149,16 @@ define(['questAPI'], function(Quest){
 		]
 	});
 	
+	API.addQuestionsSet('cultural',{
+		inherit: 'singleChoice',
+		style:'multiButtons',
+		name: 'cultural',
+		stem: "Have you had cultural sensitivity or cultural diversity education?",
+		answers: [
+			{text:'yes',value:1},
+			{text:'no',value:2},
+		]
+	});
 	API.addQuestionsSet('birthYear',{
 		inherit: 'singleChoicedrop',
 		name: 'birthyear',
@@ -1205,6 +1215,10 @@ define(['questAPI'], function(Quest){
 			},
 			{
 				inherit: 'basicPage',
+				questions: [{inherit: 'cultural'}]
+			},
+			{
+				inherit: 'basicPage',
 				questions: [ 
 					{inherit:'ethnicityomb', autoSubmit:true}
 				]
@@ -1254,6 +1268,10 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'bias'}]
+			},
+			{
+				inherit: 'basicPage',
+				questions: [{inherit: 'cultural'}]
 			},
 			{
 				inherit: 'basicPage',
