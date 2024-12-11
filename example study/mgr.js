@@ -81,10 +81,9 @@ define(['managerAPI',
         }],
 	    
 	demographics: [{
+	    type: 'quest',
             name: 'demographics',
-            templateUrl: 'demographics.js',
-            title: 'Demographics',
-            header: 'Demographics'
+            scriptUrl: 'demographics.js',
         }],
 	    
         raceiat_instructions: [{
