@@ -79,7 +79,14 @@ define(['managerAPI',
             title: 'Consent',
             header: 'Consent'
         }],
-
+	    
+	demographics: [{
+            name: 'demographics',
+            templateUrl: 'demographics.js',
+            title: 'Demographics',
+            header: 'Demographics'
+        }],
+	    
         raceiat_instructions: [{
             inherit: 'instructions',
             name: 'raceiat_instructions',
@@ -164,6 +171,7 @@ define(['managerAPI',
         
         {inherit: 'intro'},
 	{inherit: 'consent'},
+	{inherit: 'demographics'},
         {
             mixer:'random',
             data:[
