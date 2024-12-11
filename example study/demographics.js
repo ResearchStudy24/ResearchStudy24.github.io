@@ -119,7 +119,21 @@ define(['questAPI'], function(Quest){
 			{text:'21+',value:5}
 		]
 	});
-
+	
+	API.addQuestionsSet('settings',{
+		inherit: 'singleChoice',
+		style:'multiButtons',
+		name: 'settings',
+		stem: "What clinical settings have you worked in?",
+		answers: [
+			{text:'Private practice',value:1},
+			{text:'Residential',value:2},
+			{text:'Group home',value:3},
+			{text:'County agency',value:4},
+			{text:'Hospital',value:5},
+			{text:'Foster home',value:6}
+		]
+	});
 	API.addQuestionsSet('birthYear',{
 		inherit: 'singleChoicedrop',
 		name: 'birthyear',
@@ -1168,6 +1182,10 @@ define(['questAPI'], function(Quest){
 			},
 			{
 				inherit: 'basicPage',
+				questions: [{inherit: 'settings'}]
+			},
+			{
+				inherit: 'basicPage',
 				questions: [ 
 					{inherit:'ethnicityomb', autoSubmit:true}
 				]
@@ -1209,6 +1227,10 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'clinicalYears'}]
+			},
+			{
+				inherit: 'basicPage',
+				questions: [{inherit: 'settings'}]
 			},
 			{
 				inherit: 'basicPage',
