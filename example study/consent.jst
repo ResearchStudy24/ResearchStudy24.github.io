@@ -55,3 +55,23 @@
       Start
     </button>
   </div>
+  window.addEventListener('load', function () {
+    var checkbox = document.getElementById('consentCheck');
+    var button = document.getElementById('startButton');
+
+    if (!checkbox || !button) {
+      console.error('Checkbox or button not found!');
+      return;
+    }
+
+    checkbox.addEventListener('change', function () {
+      button.disabled = !checkbox.checked;
+    });
+
+    button.addEventListener('click', function () {
+      if (checkbox.checked) {
+        window.minnoJS.click(); // advance to next task
+      }
+    });
+  });
+</script>
