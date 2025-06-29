@@ -54,15 +54,20 @@
 </div>
 </div>
 <script>
-  // Wait for the DOM and Minno to be ready
-  window.addEventListener('load', function () {
+  window.onload = function () {
     const checkbox = document.getElementById('consentCheck');
     const button = document.getElementById('startButton');
 
-    if (!checkbox || !button) return;
+    // Make sure both elements exist
+    if (!checkbox || !button) {
+      console.error("Consent checkbox or button not found");
+      return;
+    }
 
+    // Enable button when checkbox is checked
     checkbox.addEventListener('change', function () {
       button.disabled = !this.checked;
     });
-  });
+  };
 </script>
+
