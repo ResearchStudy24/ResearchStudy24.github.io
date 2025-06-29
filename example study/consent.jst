@@ -42,9 +42,28 @@
     stop my participation in this research project at any time.<br/><br/>
 	</p>
 
-	<div class="text-center proceed" style="margin: 30px auto 10px;">
-		<button pi-message-done type="button" class="btn btn-primary">
-			Start
-		</button>
-	</div>
+	<p class="text-center">
+        <input type="checkbox" id="consentCheck">
+        <label for="consentCheck">I have read and agree to participate in this study.</label>
+        </p>
+
+     <div class="text-center proceed" style="margin: 30px auto 10px;">
+     <button id="startButton" type="button" class="btn btn-primary" disabled>
+      Start
+     </button>
 </div>
+
+<script>
+  const checkbox = document.getElementById('consentCheck');
+  const button = document.getElementById('startButton');
+
+  checkbox.addEventListener('change', function () {
+    button.disabled = !this.checked;
+  });
+
+  button.addEventListener('click', function () {
+    window.minnoJS.click(); // Proceeds with the study
+  });
+</script>
+
+	</div>
