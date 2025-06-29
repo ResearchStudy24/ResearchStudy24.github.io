@@ -52,16 +52,17 @@
       Start
      </button>
 </div>
-
+</div>
 <script>
-  const checkbox = document.getElementById('consentCheck');
-  const button = document.getElementById('startButton');
+  // Wait for the DOM and Minno to be ready
+  window.addEventListener('load', function () {
+    const checkbox = document.getElementById('consentCheck');
+    const button = document.getElementById('startButton');
 
-  checkbox.addEventListener('change', function () {
-    button.disabled = !this.checked;
-  });
+    if (!checkbox || !button) return;
 
-  button.addEventListener('click', function () {
-    window.minnoJS.click(); // Proceeds with the study
+    checkbox.addEventListener('change', function () {
+      button.disabled = !this.checked;
+    });
   });
 </script>
