@@ -68,20 +68,9 @@ define(['questAPI'], function(Quest){
 	/**
 	* Actual questions
 	*/
-	// API.addQuestionsSet('birthSex',{
-	// 	inherit: 'singleChoice',
-	// 	name: 'birthSex',
-	// 	stem: "What sex were you assigned at birth, on your original birth certificate?",
-	// 	answers: [
-	// 		{text:'Male',value:1},
-	// 		{text:'Female',value:2}
-	// 	]
-	// });
-
-	
 
 	 API.addQuestionsSet('license',{
-		inherit: 'singleChoice',
+		inherit: 'multiChoice',
 		style:'multiButtons',
 		name: 'license',
 		stem: "What professional mental health license do you hold?",
