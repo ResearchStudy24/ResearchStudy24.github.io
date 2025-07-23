@@ -80,6 +80,7 @@ define(['questAPI'], function(Quest){
 			{text:'LPCC',value:3},
 			{text:'Psychologist',value:4},
 			{text:'Psychiatrist',value:5}
+			{text:'Other',value:6}
 		]
 	});
 	
@@ -109,6 +110,7 @@ define(['questAPI'], function(Quest){
 			{text:'County agency',value:4},
 			{text:'Hospital',value:5},
 			{text:'Foster home',value:6}
+			{text:'Other',value:7}
 		]
 	});
 	
@@ -245,8 +247,8 @@ define(['questAPI'], function(Quest){
 	});
 
 	API.addQuestionsSet('raceomb',{
-		inherit: 'multichoice',
-		name: 'raceomb002',
+		inherit: 'multiChoice',
+		name: 'raceomb',
 		stem: "What is your race?",
 		autoSubmit: false,
 		answers: [
@@ -318,7 +320,10 @@ define(['questAPI'], function(Quest){
 				inherit: 'basicPage',
 				questions: [{inherit: 'measures'}]
 			},
-			
+			{
+    				inherit: 'basicPage',
+    				questions: [{inherit: 'raceomb'}]
+			}
 		]);
 	}
 	else
@@ -356,8 +361,11 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'num'}]
-			}
-			
+			},
+			{
+    				inherit: 'basicPage',
+   				questions: [{inherit: 'raceomb'}]
+			}	
 		]);
 	}
 
