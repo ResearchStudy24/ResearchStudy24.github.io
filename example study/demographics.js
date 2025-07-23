@@ -297,6 +297,10 @@ define(['questAPI'], function(Quest){
 				questions: [{inherit: 'birthYear'}]
 			},
 			{
+    				inherit: 'basicPage',
+    				questions: [{inherit: 'raceomb'}]
+			},
+			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'license'}]
 			},
@@ -319,11 +323,7 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'measures'}]
-			},
-			{
-    				inherit: 'basicPage',
-    				questions: [{inherit: 'raceomb'}]
-			}
+			}	
 		]);
 	}
 	else
@@ -334,6 +334,10 @@ define(['questAPI'], function(Quest){
 				questions: [{inherit: 'birthYear'}]
 			},
 			{
+    				inherit: 'basicPage',
+   				questions: [{inherit: 'raceomb'}]
+			},
+			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'license'}]
 			},
@@ -356,11 +360,7 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'measures'}]
-			},
-			{
-    				inherit: 'basicPage',
-   				questions: [{inherit: 'raceomb'}]
-			}	
+			}		
 		]);
 	}
 
