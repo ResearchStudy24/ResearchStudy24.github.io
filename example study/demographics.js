@@ -81,7 +81,7 @@ define(['questAPI'], function(Quest){
 	
 
 	 API.addQuestionsSet('license',{
-		inherit: 'multiChoice',
+		inherit: 'singleChoice',
 		style:'multiButtons',
 		name: 'license',
 		stem: "What professional mental health license do you hold?",
@@ -91,7 +91,6 @@ define(['questAPI'], function(Quest){
 			{text:'LPCC',value:3},
 			{text:'Psychologist',value:4},
 			{text:'Psychiatrist',value:5}
-			{text:'Other',value:6}
 		]
 	});
 	
@@ -110,7 +109,7 @@ define(['questAPI'], function(Quest){
 	});
 	
 	API.addQuestionsSet('settings',{
-		inherit: 'multiChoice',
+		inherit: 'singleChoice',
 		style:'multiButtons',
 		name: 'settings',
 		stem: "What clinical settings have you worked in?",
@@ -121,7 +120,6 @@ define(['questAPI'], function(Quest){
 			{text:'County agency',value:4},
 			{text:'Hospital',value:5},
 			{text:'Foster home',value:6}
-			{text:'Other',value:7}
 		]
 	});
 	
@@ -258,19 +256,19 @@ define(['questAPI'], function(Quest){
 	});
 
 	API.addQuestionsSet('raceomb',{
-		inherit: 'multiChoicedrop',
+		inherit: 'singleChoicedrop',
 		name: 'raceomb002',
 		stem: "What is your race?",
 		autoSubmit: false,
 		answers: [
 			{text:'American Indian/Alaska Native',value:1},
-			{text:'Asian',value:2},
-			{text:'Native Hawaiian or other Pacific Islander',value:3},
-			{text:'Black or African American',value:4},
-			{text:'White',value:5},
-			{text:'Hispanic or Latin',value:6},
+			{text:'East Asian',value:2},
+			{text:'South Asian',value:3},
+			{text:'Native Hawaiian or other Pacific Islander',value:4},
+			{text:'Black or African American',value:5},
+			{text:'White',value:6},
 			{text:'Other or Unknown',value:7},
-			{text:'Prefer not to say,value:8}
+			{text:'Multiracial',value:8}
 		]
 	});
 
@@ -280,14 +278,26 @@ define(['questAPI'], function(Quest){
         stem: "Please select the categories that comprise your race. (Click a category once to select it. Click it again to deselect. You may select as many categories as you wish. When you are finished, click Submit.)",
         answers: [
 			{text:'American Indian/Alaska Native',value:1},
-			{text:'Asian',value:2},
-			{text:'Native Hawaiian or other Pacific Islander',value:3},
-			{text:'Black or African American',value:4},
-			{text:'White',value:5},
-			{text:'Hispanic or Latin',value:6},
-			{text:'Other or Unknown',value:7},
-			{text:'Prefer not to say,value:8}
+			{text:'East Asian',value:2},
+			{text:'South Asian',value:3},
+			{text:'Native Hawaiian or other Pacific Islander',value:4},
+			{text:'Black or African American',value:5},
+			{text:'White',value:6},
+			{text:'Other or Unknown',value:7}
 		]
+	});
+
+	API.addQuestionsSet('ethnicityomb',{
+		inherit: isTouch ? 'singleChoice' : 'singleChoicedrop',
+        name: 'ethnicityomb',
+        autoSubmit: false,
+        stem: "What is your ethnicity?",
+        answers: [
+			{text:'Hispanic or Latino',value:1},
+			{text:'Not Hispanic or Latino',value:2},
+			{text:'Unknown',value:3}
+		]
+    	});
 	
 	API.addQuestionsSet('measures',{
 		inherit: 'multiChoice',
@@ -326,7 +336,20 @@ define(['questAPI'], function(Quest){
 	// 		{text:'Moderately Liberal',value:6},
 	// 		{text:'Strongly Liberal',value:7}
 	// 	]
-	// 
+	// });
+
+	API.addQuestionsSet('num',{
+		inherit: 'singleChoice',
+		name: 'num002',
+		style:'multiButtons',
+		stem: "How many Implicit Association Tests (IATs) have you previously performed?",
+		answers: [
+			'0',
+			'1',
+			'2',
+		  '3-5',
+			'6+'
+		]
 	});
 
 	// API.addQuestionsSet('religionid',{
