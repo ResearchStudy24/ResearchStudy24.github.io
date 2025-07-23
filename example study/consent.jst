@@ -53,13 +53,13 @@
             type="button"
             class="btn btn-primary"
             ng-disabled="!consentGiven">
-      Start
+      Next
     </button>
   </div>
 <script>
   window.addEventListener('load', function () {
     var checkbox = document.getElementById('consentCheck');
-    var button = document.getElementById('startButton');
+    var button = document.getElementById('NextButton');
 
     if (!checkbox || !button) {
       console.error('Checkbox or button not found!');
