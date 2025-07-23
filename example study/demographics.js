@@ -79,7 +79,7 @@ define(['questAPI'], function(Quest){
 			{text:'LCSW',value:2},
 			{text:'LPCC',value:3},
 			{text:'Psychologist',value:4},
-			{text:'Psychiatrist',value:5}
+			{text:'Psychiatrist',value:5},
 			{text:'Other',value:6}
 		]
 	});
@@ -248,7 +248,7 @@ define(['questAPI'], function(Quest){
 
 	API.addQuestionsSet('raceomb',{
 		inherit: 'multiChoice',
-		name: 'raceomb002',
+		name: 'raceomb',
 		stem: "What is your race?",
 		autoSubmit: false,
 		answers: [
