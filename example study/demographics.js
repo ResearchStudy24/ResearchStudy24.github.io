@@ -248,7 +248,7 @@ define(['questAPI'], function(Quest){
 
 	API.addQuestionsSet('raceomb',{
 		inherit: 'multiChoice',
-		name: 'raceomb',
+		name: 'raceomb002',
 		stem: "What is your race?",
 		autoSubmit: false,
 		answers: [
