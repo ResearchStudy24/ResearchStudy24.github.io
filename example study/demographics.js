@@ -109,7 +109,7 @@ define(['questAPI'], function(Quest){
 			{text:'Group home',value:3},
 			{text:'County agency',value:4},
 			{text:'Hospital',value:5},
-			{text:'Foster home',value:6}
+			{text:'Foster home',value:6},
 			{text:'Other',value:7}
 		]
 	});
@@ -135,7 +135,7 @@ define(['questAPI'], function(Quest){
 		stem: "Have you had cultural sensitivity or cultural diversity education?",
 		answers: [
 			{text:'yes',value:1},
-			{text:'no',value:2},
+			{text:'no',value:2}
 		]
 	});
 	API.addQuestionsSet('birthYear',{
@@ -356,11 +356,6 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'measures'}]
-		
-			},
-			{
-				inherit: 'basicPage',
-				questions: [{inherit: 'num'}]
 			},
 			{
     				inherit: 'basicPage',
