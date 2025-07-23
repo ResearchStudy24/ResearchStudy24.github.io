@@ -98,7 +98,7 @@ define(['questAPI'], function(Quest){
 	});
 	
 	API.addQuestionsSet('settings',{
-		inherit: 'singleChoice',
+		inherit: 'multiChoice',
 		style:'multiButtons',
 		name: 'settings',
 		stem: "What clinical settings have you worked in?",
@@ -245,47 +245,21 @@ define(['questAPI'], function(Quest){
 	});
 
 	API.addQuestionsSet('raceomb',{
-		inherit: 'singleChoicedrop',
+		inherit: 'multichoice',
 		name: 'raceomb002',
 		stem: "What is your race?",
 		autoSubmit: false,
 		answers: [
 			{text:'American Indian/Alaska Native',value:1},
-			{text:'East Asian',value:2},
-			{text:'South Asian',value:3},
+			{text:'Asian',value:2},
+			{text:'Hispanic or Latin',value:3},
 			{text:'Native Hawaiian or other Pacific Islander',value:4},
 			{text:'Black or African American',value:5},
 			{text:'White',value:6},
 			{text:'Other or Unknown',value:7},
-			{text:'Multiracial',value:8}
+			{text:'Prefer not to say',value:8}
 		]
-	});
 
-	API.addQuestionsSet('raceombmulti',{
-		inherit: 'multiChoice',
-		name: 'raceombmulti',
-        stem: "Please select the categories that comprise your race. (Click a category once to select it. Click it again to deselect. You may select as many categories as you wish. When you are finished, click Submit.)",
-        answers: [
-			{text:'American Indian/Alaska Native',value:1},
-			{text:'East Asian',value:2},
-			{text:'South Asian',value:3},
-			{text:'Native Hawaiian or other Pacific Islander',value:4},
-			{text:'Black or African American',value:5},
-			{text:'White',value:6},
-			{text:'Other or Unknown',value:7}
-		]
-	});
-
-	API.addQuestionsSet('ethnicityomb',{
-		inherit: isTouch ? 'singleChoice' : 'singleChoicedrop',
-        name: 'ethnicityomb',
-        autoSubmit: false,
-        stem: "What is your ethnicity?",
-        answers: [
-			{text:'Hispanic or Latino',value:1},
-			{text:'Not Hispanic or Latino',value:2},
-			{text:'Unknown',value:3}
-		]
     	});
 	
 	API.addQuestionsSet('measures',{
@@ -344,18 +318,6 @@ define(['questAPI'], function(Quest){
 				inherit: 'basicPage',
 				questions: [{inherit: 'measures'}]
 			},
-			{
-				inherit: 'basicPage',
-				questions: [ 
-					{inherit:'ethnicityomb', autoSubmit:true}
-				]
-			},
-			{
-				inherit: 'basicPage',
-				questions: [ 
-					{inherit:'raceombmulti', autoSubmit:true}
-				]
-			}
 			
 		]);
 	}
@@ -389,21 +351,7 @@ define(['questAPI'], function(Quest){
 			{
 				inherit: 'basicPage',
 				questions: [{inherit: 'measures'}]
-			},
-			{
-				inherit: 'basicPage',
-				questions: [ //If required would be set to true, then participants cannot select one and leave the other empty.
-					{inherit:'raceomb', required:false},
-					{
-						mixer:'branch',
-						remix:true,
-						conditions:[{compare: 'questions.raceomb002.response',to:8}],
-						data: [
-							{inherit:'raceombmulti'}
-						]
-					},
-					{inherit:'ethnicityomb', required:false}
-				]
+		
 			},
 			{
 				inherit: 'basicPage',
