@@ -17,62 +17,68 @@
 
 	<div class="panel-body">
 	<p class='lead'>
-		<b>Thank you very much for your participation.</b>
-<br/><br/>
 
-    In this study, we measured your automatically-activated associations between the concepts '<%=category1%>' and '<%=category2%>' with the concepts '<%=att1%>' and '<%=att2%>'. 
-	Your automatically-activated association might be different than the association that you explicitly endorse. 	
-	For instance, you might consciously associate '<%=category1%>' with the concept '<%=att2%>', 
-	but show an automatic association of '<%=category1%>' with '<%=att1%>'.<br/>
-	To measure your automatically-activated association, we used the Implicit Association Test (the IAT). 
+    	Thank you for participating in this research study. Your contribution is valuable and will help us better understand 
+	how unconscious attitudes may influence diagnostic decision-making, particularly in the context of psychosis diagnoses 
+	for Black consumers of mental health care. <br/><br/>
+
+	As part of this study, you completed the Race Implicit Association Test (IAT), which measures automatically activated 
+	associations between concepts such as "African Americans" and "European Americans" and evaluative terms like "Good" and 
+	"Bad." These automatic associations may differ from your consciously held beliefs. For example, a person might consciously 
+	associate African Americans with “Good” but still show an automatic association with “Bad.” These patterns reflect cultural 
+	exposure and shared social conditioning, not personal failure or moral flaw.<br/><br/>
+
+	The IAT is not a test of prejudice, racism, or personal values. It is a research tool designed to encourage self-awareness 
+	and reflection. Results should be interpreted with care, and no single test should be considered a definitive assessment of 
+	a person’s beliefs or biases. The order in which you take the IAT can have a small effect on the results. To reduce this 
+	effect, we randomly assign the pairing order and include additional practice rounds before the second task. The order effect 
+	is usually minimal, but it is one of several variables that can influence test outcomes.<br/><br/>
+ 
 	Here are your results:
+	
+	<p class='lead' style="font-size:1.5em; color:#004085; font-weight:bold;">
+  	<b><%= global.raceiat.feedback %><b>
 	</p>
-	<b><%= global.raceiat.feedback %></b>
 	<br/><br/>
 
-	<p class='lead'><b>Disclaimer:</b><br/>
-	These results are not a definitive assessment of your automatically-activated associations. 
-	The results may be influenced by variables related to the test 
-	(e.g., the category labels or particular items used to represent the categories on the IAT) 
-	or the person (e.g., how tired you are). 
-	The results are provided for educational purposes only.</p>
+	<p class='lead'>
+	It is normal to feel discomfort, confusion, or even defensiveness when reviewing IAT results. These reactions are valid and 
+	understandable. If you find that the results have triggered emotional discomfort, we encourage you to speak with a trusted 
+	colleague, supervisor, or licensed mental health professional. To learn more about the IAT’s purpose, methodology, scoring, 
+	and limitations, please visit: https://www.projectimplicit.net/resources/about-the-iat/</p> 
 
-	<p class='lead'><b>How Does The IAT Work?</b></p>
-	<p class='lead'>The IAT measures the strength of associations between concepts 
-	(e.g., <%=category1%>, <%=category2%>) and attributes (e.g., <%=att1%>, <%=att2%>). 
-	The main idea is that making a response is easier when 
-	closely related items share the same response key. 
-	We would say that one has an automatically activated association of 
-	<%=category1%> with <%=att1%> and <%=category2%> with <%=att2%> 
-	if they are faster to categorize items 
-	when <%=category1%> and <%=att1%> share a response key 
-	relative to when <%=category2%> and <%=att1%> share a response key. <br/><br/>
-	Many researchers consider associations of Black and White people with 
-	the concepts Good and Bad an estimate of 
-	automatic preference between Black and White people. 
-	An automatic preference is your very first preference betweens people, groups, or other objects. 
-	An automatic preference might be activated even if people do not endorse that preference. 
+	<p class='lead'><b> Non-Crisis Counseling & Referral Services:?</b></p>
+	<p class='lead'>
+       • National Alliance on Mental Illness (NAMI): Peer-informed guidance and information. 
+	     o	Help Line: 📞 1-800-950-NAMI (6264) | 🌐 nami.org/help
+       • Psychology Today Therapist Directory: Find licensed therapists in your area or online.  
+	     o	🌐 https://www.psychologytoday.com
+	• Employee Assistance Program (EAP): If you are employed, your organization may offer free counseling sessions. Contact your 
+	HR department for EAP info.
 	<br/><br/>
-	Any single IAT is unlikely to predict behavior well for a specific individual. 
-	In the aggregate, the IAT can predict behavior 
-	such as discrimination in hiring and promotion, medical treatment, 
-	and decisions related to criminal justice. </p>
 
-	<p class='lead'><b>Does The Order In Which I Took The IAT Matter?</b></p>
-	<p class='lead'>Yes, the order in which you take the IAT can influence your overall results. 
-	But, the effect is very small. 
-	So if you first pair <%=category1%> + <%=att1%> / <%=category2%> + <%=att2%> 
-	and then pair <%=category1%> + <%=att2%> / <%=category2%>  + <%=att1%>, 
-	your results might be a just a tiny bit different 
-	than they would be if you had done the reverse pairing first. 
-	To minimize the order effect, we give more practice trials 
-	before the second pairing than we did before the first pairing. 
-	We also randomly assign participants to one of the two possible orderings, 
-	so half of the test-takers complete 
-	<%=category1%> + <%=att1%> / <%=category2%> + <%=att2%> 
-	and then <%=category1%> + <%=att2%> / <%=category2%>  + <%=att1%>, 
-	and the other half get the opposite order.</p>
+	<p class='lead'><b>Immediate Crisis Support:</b></p>
+	<p class='lead'>
+	• Suicide & Crisis Lifeline (24/7): Offers 24/7 emotional support via phone, chat, or text from trained crisis counselors. For any mental health, suicidal, or emotional crisis.
+	     o	📞 Call or Text 988
+	     o	Chat: 988lifeline.org/chat
+	• Crisis Text Line: Text-based support from trained volunteers supervised by professionals. Immediate help, especially if you’re overwhelmed or anxious.
+	     o	Text: Text HOME to 741741
+	     o	🌐 Website: www.crisistextline.org
+	• SAMHSA’s National Helpline: Offers 24/7 support for mental health or substance use issues, including referrals to local services.
+	     o	📞 Call: 1-800-662-HELP (4357)
+	     o	🌐 Website: samhsa.gov/find-help/national-helpline
+	• BlackLine: Peer support and crisis support line prioritizing Black, Brown, and Indigenous people. Run by community members, for the community.
+	     o	📞 Call/Text: 1-800-604-5841</p>
 
+	<p class='lead'> Your participation was entirely voluntary, and you may withdraw your data at any time by contacting the researcher before the study is completed and published. 
+	All responses have been anonymized and stored securely to protect your confidentiality.
+	If you have questions about the study or your participation, feel free to contact:
+	Principal Investigator: Sherrell Fairley
+	Sherrell.Fairley@hiu.edu
+	Hope International University</p>
+
+	<p class='lead'><b>Thank you again for your time and thoughtful engagement.</b></p>
 	<p class='lead'>Please press the button below to complete the study.</p>
 	</p>
 	<div class="text-center proceed" style="margin: 30px auto 10px;">
