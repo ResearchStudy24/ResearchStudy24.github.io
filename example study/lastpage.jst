@@ -1,3 +1,5 @@
+<script src="https://datapipe.tulane.edu/datapipe.js"></script>
+
 <%
 	var category2 = global.whiteLabels;
 	var category1 = global.blackLabels;
@@ -41,6 +43,15 @@
 	<p class='lead' style="font-size:1.5em; color:#004085; font-weight:bold;">
 		<%= global.raceiat.feedback %>
 	</p>
+if (typeof dataPipe !== 'undefined') 
+{dataPipe.pushData("test-participant", {
+    feedback: global.raceiat.feedback,
+    dScore: global.raceiat.dScore || null,
+    category1: global.blackLabels,
+    category2: global.whiteLabels,
+    timestamp: Date.now()
+  });
+}
 
 	<p class='lead'>
 	It is normal to feel discomfort, confusion, or even defensiveness when reviewing IAT results. These reactions are valid and 
