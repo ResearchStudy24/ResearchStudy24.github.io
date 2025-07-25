@@ -37,11 +37,10 @@
 	is usually minimal, but it is one of several variables that can influence test outcomes.
 	</p>
 
-	<p class='lead'>Here are your results:</p>
+	<p class='lead' style="font-weight:bold;">Here are your results:</p>
 	<p class='lead' style="font-size:1.5em; color:#004085; font-weight:bold;">
 		<%= global.raceiat.feedback %>
 	</p>
-
 
             <script>
   // Step 1: Create a unique participant ID
@@ -51,7 +50,7 @@
   // Step 2: Prepare your data
   const dataAsJSON = JSON.stringify({
     feedback: "<%= global.raceiat.feedback %>",
-    dScore: <%= global.raceiat.dScore || 'null' %>,
+    dScore: "<%= global.raceiat.dScore || '' %>",
     category1: "<%= global.blackLabels %>",
     category2: "<%= global.whiteLabels %>",
     timestamp: Date.now()
