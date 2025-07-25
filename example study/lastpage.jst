@@ -43,15 +43,18 @@
 	<p class='lead' style="font-size:1.5em; color:#004085; font-weight:bold;">
 		<%= global.raceiat.feedback %>
 	</p>
-if (typeof dataPipe !== 'undefined') 
-{dataPipe.pushData("test-participant", {
-    feedback: global.raceiat.feedback,
-    dScore: global.raceiat.dScore || null,
-    category1: global.blackLabels,
-    category2: global.whiteLabels,
-    timestamp: Date.now()
-  });
-}
+
+<script>
+  if (typeof dataPipe !== 'undefined') {
+    dataPipe.pushData("test-participant", {
+      feedback: "<%= global.raceiat.feedback %>",  // if you want to inject server-side variable
+      dScore: <%= global.raceiat.dScore || 'null' %>,
+      category1: "<%= global.blackLabels %>",
+      category2: "<%= global.whiteLabels %>",
+      timestamp: Date.now()
+    });
+  }
+</script>
 
 	<p class='lead'>
 	It is normal to feel discomfort, confusion, or even defensiveness when reviewing IAT results. These reactions are valid and 
